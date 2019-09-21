@@ -4,6 +4,7 @@ import './App.css';
 import Header from './components/Header';
 import ChartOne from './components/ChartOne';
 import ChartTwo from './components/ChartTwo';
+import Circle from './components/Circle';
 
 class App extends Component {
   render() {
@@ -12,7 +13,7 @@ class App extends Component {
         <Header />
         <ChartOne /> 
         <ChartTwo />
-        <circle />
+        <Circle />
       </div>
     );
   }

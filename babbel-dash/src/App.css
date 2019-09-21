@@ -28,3 +28,10 @@ a {
   width: 50%;
   overflow: hidden;
 }
+
+#pie1 {
+  max-width: 550px;
+  float: left;
+  width: 50%;
+  overflow: hidden;
+}
