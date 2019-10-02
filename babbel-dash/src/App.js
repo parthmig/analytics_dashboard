@@ -5,6 +5,7 @@ import Header from './components/Header';
 import ChartOne from './components/ChartOne';
 import ChartTwo from './components/ChartTwo';
 import Circle from './components/Circle';
+import CircleTwo from './components/CircleTwo'
 import { DropdownMenu } from './components/DropdownMenu';
 
 class App extends Component {
@@ -16,6 +17,7 @@ class App extends Component {
         <ChartOne /> 
         <ChartTwo />
         <Circle />
+        <CircleTwo />
       </div>
     );
   }

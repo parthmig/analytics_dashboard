@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class Header extends Component {
   render() {
     return(
-      <div>
+      <div id="head">
         <h1>Babbel Insights</h1>
       </div>
     );

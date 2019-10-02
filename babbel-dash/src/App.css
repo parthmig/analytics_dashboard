@@ -16,6 +16,11 @@ a {
   color: #333;
   text-decoration: none; 
 }
+#head {
+  background-color: #333;
+  color: #e5e5e5;
+  padding: 1%;
+}
 
 #left {
   float: left;
@@ -27,6 +32,11 @@ a {
   float: left;
   width: 50%;
   overflow: hidden;
+}
+
+#pie1 {
+  width: 100%;
+  align-self: center;
 }
 
 #pie1 {
@@ -47,7 +57,7 @@ ul {
   top:45px;
   right:0px;
   width: 200px;
-  background-color: white;
+  background-color:orange;
   font-weight:bold;
   position: absolute;
 
@@ -55,7 +65,7 @@ ul {
   z-index: 1;
 }
 li a {
-  color: #000;
+  color: whitesmoke;
   text-decoration: none;
 }
 li {
@@ -70,13 +80,13 @@ li:hover {
   color: white;
 }
 .button{
-  width:178px;
-  height:18px;
-  background-color:#ff3232 ;
-  padding:12px;
+  width:180px;
+  height:35px;
+  background-color:orangered ;
+  padding:7px;
   border-radius:5px;
   font-weight:bold;
-  color:white;
+  color:whitesmoke;
 }
 .button:before{
   content:"";

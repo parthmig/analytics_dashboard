@@ -13,38 +13,41 @@ export class DropdownMenu extends Component {
        
        };
        
-       showDropdownMenu(event) {
+        showDropdownMenu(event) {
            event.preventDefault();
            this.setState({ displayMenu: true }, () => {
            document.addEventListener('click', this.hideDropdownMenu);
            });
          }
        
-         hideDropdownMenu() {
-           this.setState({ displayMenu: false }, () => {
-             document.removeEventListener('click', this.hideDropdownMenu);
+        hideDropdownMenu() {
+            this.setState({ displayMenu: false }, () => {
+                document.removeEventListener('click', this.hideDropdownMenu);
            });
        
          }
     render() {
+        function handleClick(e) {
+            e.preventDefault();
+            console.log('The link was clicked.');
+          }
         return (
             <div  className="dropdown" style = {{background:"red",width:"200px"}} >
-         <div className="button" onClick={this.showDropdownMenu}> My Setting </div>
+            <div className="button" onClick={this.showDropdownMenu}> Choose Age Group </div>
 
-          { this.state.displayMenu ? (
-          <ul>
-         <li><a className="active" href="#Create Page">Create Page</a></li>
-         <li><a href="#Manage Pages">Manage Pages</a></li>
-         <li><a href="#Create Ads">Create Ads</a></li>
-         <li><a href="#Manage Ads">Manage Ads</a></li>
-         <li><a href="#Activity Logs">Activity Logs</a></li>
-         <li><a href="#Setting">Setting</a></li>
-         <li><a href="#Log Out">Log Out</a></li>
-          </ul>
-        ):
-        (
-          null
-        )
+            { this.state.displayMenu ? (
+            <ul>
+            <li><a className="active" href="#17" onClick={handleClick}>17 below</a></li>
+            <li><a href="#18">18 - 24</a></li>
+            <li><a href="#25">25 - 34</a></li>
+            <li><a href="#35">35 - 44</a></li>
+            <li><a href="#45">45 - 54</a></li>
+            <li><a href="#55">55 - 64</a></li>
+            </ul>
+            ):
+            (
+                null
+            )
         }
 
        </div>
