@@ -2,10 +2,13 @@ import React, { Component } from 'react'
 import { VictoryBar, VictoryChart, VictoryTheme, VictoryLabel } from 'victory'
 
 const data = [
-    {quarter: 10, earnings: 4.89},
-    {quarter: 18, earnings: 8.94},
-    {quarter: 25, earnings: 18.27},
-    {quarter: 35, earnings: 18.10}
+    {age: 10, percent: 4.89},
+    {age: 18, percent: 8.94},
+    {age: 25, percent: 18.27},
+    {age: 35, percent: 18.10},
+    {age: 45, percent: 18.19},
+    {age: 55, percent: 16.10},
+    {age: 65, percent: 14.08}
   ];
 
 export class ChartOne extends Component {
@@ -17,8 +20,8 @@ export class ChartOne extends Component {
                     <VictoryBar
                         style={{ data: { fill: "#c43a31" } }}
                         data={data}
-                        x="quarter"
-                        y="earnings"
+                        x="age"
+                        y="percent"
                     />
                     <VictoryLabel text="%" x={14} y={170} textAnchor="middle"/>
                     <VictoryLabel text="age group" x={180} y={335} textAnchor="middle"/>
