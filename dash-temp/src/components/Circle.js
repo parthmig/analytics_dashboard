@@ -8,10 +8,10 @@ export class Circle extends Component {
             
             <VictoryPie
                 data={[
-                    { x: "1 month", y: 1772 },
-                    { x: "3 month", y: 2635 },
-                    { x: "6 month", y: 482 },
-                    { x: "12 month", y: 660 }
+                    { x: "12 month", y: 1772 },
+                    { x: "6 month", y: 2635 },
+                    { x: "1 month", y: 482 },
+                    { x: "3 month", y: 660 }
                 ]}
                 colorScale={["tomato", "navy", "gold", "cyan" ]}
                 //cornerRadius={({ datum }) => datum.y * 5}

@@ -17,8 +17,8 @@ a {
   text-decoration: none; 
 }
 #head {
-  background-color: #333;
-  color: #e5e5e5;
+  background-color: orange;
+  color: whitesmoke;
   padding: 1%;
 }
 
@@ -35,16 +35,19 @@ a {
 }
 
 #pie1 {
-  width: 100%;
-  align-self: center;
+  max-width: 550px;
+  float: left;
+  overflow: hidden;
+  width: 50%;
 }
 
-#pie1 {
-  max-width: 550px;
+#pie2 {
+  max-width: 600px;
   float: left;
   width: 50%;
   overflow: hidden;
 }
+
 
 .dropdown {
   position: relative;
@@ -57,7 +60,7 @@ ul {
   top:45px;
   right:0px;
   width: 200px;
-  background-color:orange;
+  background-color:#333;
   font-weight:bold;
   position: absolute;
 
@@ -82,7 +85,7 @@ li:hover {
 .button{
   width:180px;
   height:35px;
-  background-color:orangered ;
+  background-color: #333 ;
   padding:7px;
   border-radius:5px;
   font-weight:bold;
@@ -95,6 +98,6 @@ li:hover {
   height:0px;
   border: 10px solid;
   border-color: white transparent transparent transparent;
-  right:6px;
+  right:1px;
   top:18px;
 }

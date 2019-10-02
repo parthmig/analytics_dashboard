@@ -85,13 +85,15 @@ print('Count for 45-54 ', count_for_45)
 print('Count for 55-64 ', count_for_55)
 print('Count for 65-74 ', count_for_65)
 
-# list for desired age
-ageList = []
+
 
 print(' ')
 
 # which age do we want to look at
 age = input("Which age group would you like to look at? ")
+
+# list for desired age
+ageList = []
 
 # method will check only for the desired age
 def listAge(age):
@@ -99,17 +101,14 @@ def listAge(age):
     # check for age and assign to age list for insights
     if age == str('17-'):
         ageList = list_for_17
-        #print(ageList[:50])
     elif age == str('18-24'):
         ageList = list_for_18
-        #print(ageList[:50])
     elif age == str('25+'):
         ageList = list_for_25
     elif age == str('35+'):
         ageList = list_for_35
     elif age == str('45+'):
         ageList = list_for_45
-        #print(ageList[:50])
     elif age == str('55+'):
         ageList = list_for_55
     elif age == str('65+'):
@@ -130,6 +129,16 @@ def listAge(age):
     subThree = 0
     subSix = 0
     subTwelve = 0
+
+    # counts for various platforms for discount
+    countForTV2 = 0
+    countForOnline2 = 0
+    countForMag2 = 0
+    countForSearch2 = 0
+    countForApp2 = 0
+    countForRec2 = 0
+    countOther2 = 0
+
 
     # loop to check count of platforms
     for k in ageList:
@@ -171,10 +180,37 @@ def listAge(age):
             elif l[3] == str('12M12'):
                 subTwelve += 1
 
+    for d in ageList:
+        if d[2] == str('Discount'):
+            if d[1] == str('TV_Ads'):
+                countForTV2 += 1
+            elif d[1] == str('Online_Ads'):
+                countForOnline2 += 1
+            elif d[1] == str('Magazine/Newspaper'):
+                countForMag2 += 1
+            elif d[1] == str('Web_Search_Engine'):
+                countForSearch2 += 1
+            elif d[1] == str('Appstore'):
+                countForApp2 += 1
+            elif d[1] == str('Recommendation'):
+                countForRec2 += 1
+            elif d[1] == str('Other'):
+                countOther2 += 1 
+
+
+
     print('People getting a discount: ', countDisc)
     print(' ')
 
-    print(ageList[:100])
+    print("Amongst the people getting a discount: ")
+    print("Count for TV             ", countForTV2)
+    print("Count for Online Ads     ", countForOnline2)
+    print("Count for Magazines      ", countForMag2)
+    print("Count for Web            ", countForSearch2)
+    print("Count for Appstore       ", countForApp2)
+    print("Count for Recommendation ", countForRec2)
+    print("Count for Others         ", countOther2)
+    print(' ')
 
     print("In this age group ", subOne, " people bought a one month membership, ", subThree, " people bought a three month membership, ") 
     print(subSix , " people bought a six month membership, and ", subTwelve, " people bought a twelve month membership.")
@@ -184,6 +220,3 @@ def listAge(age):
 
 #function call
 listAge(age)
-
-## TODO # compare subscription length - discount provision
-# break down by channel

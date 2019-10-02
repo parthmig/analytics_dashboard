@@ -2,13 +2,13 @@ import React, { Component } from 'react'
 import { VictoryBar, VictoryChart, VictoryTheme, VictoryLabel } from 'victory'
 
 const data = [
-    {quarter: 'TV', earnings: 11.49},
-    {quarter: 'Online', earnings: 17.68},
-    {quarter: 'Mags', earnings: 1.52},
-    {quarter: 'Web', earnings: 30.69},
-    {quarter: 'Appstore', earnings: 11.89},
-    {quarter: 'Recc', earnings: 14.71},
-    {quarter: 'Others', earnings: 12.02}
+    {quarter: 'TV', earnings: 21.00},
+    {quarter: 'Online', earnings: 23.70},
+    {quarter: 'Mags', earnings: 1.19},
+    {quarter: 'Web', earnings: 24.99},
+    {quarter: 'Appstore', earnings: 6.74},
+    {quarter: 'Recc', earnings: 11.46},
+    {quarter: 'Others', earnings: 11.21}
 ];
 
 

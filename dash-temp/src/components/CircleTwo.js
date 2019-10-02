@@ -7,19 +7,17 @@ export class CircleTwo extends Component {
             <div id = "pie2">
             <VictoryPie
                 data={[
-                    { x: "TV", y: 0.10 },
-                    { x: "Online Ads", y: 0.21 },
-                    //{ x: "Appstore", y: 1216 },
-                    { x: "Web", y: 0.27 },
-                    { x: "Recommendation", y: 0.16 }
+                    { x: "TV", y: 0.19 },
+                    { x: "Online Ads", y: 0.26 },
+                    { x: "Web", y: 0.22 },
+                    { x: "Recommendation", y: 0.12 }
                     
                 ]}
                 colorScale={["tomato", "navy", "gold", "cyan" ]}
-                //cornerRadius={({ datum }) => datum.y * 5}
                 height={300}
                 width={500}
                 padAngle={({ datum }) => datum.y}
-                padding={{ top: 80, bottom: 60, left: -95 }}
+                padding={{ top: 130, bottom: 60, left: -95 }}
             />
             <VictoryLabel text="clustering discounted sales by channel" textAnchor="left"/>
             </div>
