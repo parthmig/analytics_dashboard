@@ -1,4 +1,8 @@
-## ignore os files
+# ignore os files
 
 .DS_Store
+
+# res files
+
+*.png
 
