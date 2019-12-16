@@ -1,24 +1,18 @@
+# import req libraries
 import pandas as pd
 import numpy as np
 
 #df for all sales
 df_sales = pd.read_csv('sales_revised.csv', delimiter=',', names = ['X1', 'is_first_sale', 'age', 'app_vendor',	'subscription', 'Sales1',	'Sales10',	'SalesAll'	'channel',	'campaign',	'Grouped Channel1',	'Discount',	'HDYH',	'city',	'price_eur'])
-#print(df_sales[:10])
 
-#processed df and make list
+# process df and make list
 df_sales1 = df_sales[['is_first_sale', 'HDYH', 'Discount', 'app_vendor']]
-#print(df_sales1[:10])
 sales_list = df_sales1.values.tolist()
-#print(sales_list[:10])
 
 #remove all na values from list
 for i in sales_list[:8000]:
-    #print(i)
     if i[0] == str('(na)') or i[0] == str('NA') or i[1] == str('NA') or i[1] == str('No Answer') or i[2] == str('NA'):
-        #print(i)
         sales_list.remove(i)
-
-#print(sales_list[:50])
 
 # separate lists and counters for all age groups
 list_for_17 = []
@@ -75,6 +69,7 @@ for j in sales_list:
         count_for_65 += 1
         count +=1
 
+# print counts
 print(' ')
 print('Total Count:    ' , count)
 print('Count for 17-   ', count_for_17)
@@ -84,12 +79,9 @@ print('Count for 35-44 ', count_for_35)
 print('Count for 45-54 ', count_for_45)
 print('Count for 55-64 ', count_for_55)
 print('Count for 65-74 ', count_for_65)
-
-
-
 print(' ')
 
-# which age do we want to look at
+# select age
 age = input("Which age group would you like to look at? ")
 
 # list for desired age
@@ -122,15 +114,15 @@ def listAge(age):
     countForApp = 0
     countForRec = 0
     countOther = 0
-
     countDisc = 0
-
+    
+    # count for sub duration
     subOne = 0
     subThree = 0
     subSix = 0
     subTwelve = 0
 
-    # counts for various platforms for discount
+    # counts for various platforms given discount
     countForTV2 = 0
     countForOnline2 = 0
     countForMag2 = 0
@@ -157,7 +149,7 @@ def listAge(age):
         elif k[1] == str('Other'):
             countOther += 1 
 
-    #print(ageList[:50])
+    # print counts for channels
     print(' ')
     print("Count for TV             ", countForTV)
     print("Count for Online Ads     ", countForOnline)
@@ -168,6 +160,7 @@ def listAge(age):
     print("Count for Others         ", countOther)
     print(' ')
 
+    # loop through list for sub duration
     for l in ageList:
         if l[2] == str('Discount'):
             countDisc += 1
@@ -180,6 +173,7 @@ def listAge(age):
             elif l[3] == str('12M12'):
                 subTwelve += 1
 
+    # loop through list for channel
     for d in ageList:
         if d[2] == str('Discount'):
             if d[1] == str('TV_Ads'):
@@ -196,12 +190,8 @@ def listAge(age):
                 countForRec2 += 1
             elif d[1] == str('Other'):
                 countOther2 += 1 
-
-
-
-    print('People getting a discount: ', countDisc)
-    print(' ')
-
+    
+    # print counts for channel with discounts
     print("Amongst the people getting a discount: ")
     print("Count for TV             ", countForTV2)
     print("Count for Online Ads     ", countForOnline2)
@@ -215,8 +205,8 @@ def listAge(age):
     print("In this age group ", subOne, " people bought a one month membership, ", subThree, " people bought a three month membership, ") 
     print(subSix , " people bought a six month membership, and ", subTwelve, " people bought a twelve month membership.")
 
-
+    # return processed list
     return ageList
 
-#function call
+# function call
 listAge(age)
